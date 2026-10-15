@@ -1,28 +1,25 @@
 # anushkaghei.netlify.app
 
-Personal portfolio for Anushka Ghei. Plain HTML, CSS, and JavaScript with no build step.
+Personal portfolio for Anushka Ghei. React, TypeScript, Vite, Tailwind, and Framer Motion.
 
-## Files
+## Editing content
 
-- `index.html`: all page content (experience, projects, publications, skills)
-- `styles.css`: layout and light/dark theme
-- `main.js`: theme toggle, mobile menu, project filters, scroll effects
-- `assets/Anushka_Ghei_Resume.pdf`: the resume linked from the site
+Almost everything on the site lives in one file: `src/data/portfolio.ts`
+(bio, roles, projects, publications, skills, education, experience, recent updates).
+The About section text is in `src/components/portfolio/AboutSection.tsx`.
 
-## Editing
+To update the resume, replace `public/Anushka_Ghei_Resume.pdf` and keep the same filename.
 
-Open `index.html` and edit the text directly. To update the resume, replace
-`assets/Anushka_Ghei_Resume.pdf` and keep the same filename.
-
-Preview locally:
+## Running locally
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open http://localhost:8000.
+Then open http://localhost:8080.
 
 ## Deploying
 
-Netlify is connected to this repo. Every push to `main` redeploys the site.
-No build command is needed (see `netlify.toml`).
+Netlify builds with `npm run build` and publishes `dist/` (see `netlify.toml`).
+Every push to `main` redeploys the site.
